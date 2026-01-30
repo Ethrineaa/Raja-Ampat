@@ -10,7 +10,7 @@ export interface Activity {
   id: string;
   title: string;
   desc?: string;
-  icon?: string; // Adding icon for the design
+  icon?: string; 
 }
 
 export interface GalleryItem {

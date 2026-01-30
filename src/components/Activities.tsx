@@ -14,7 +14,7 @@ const Activities: React.FC<Props> = ({ items }) => {
         <div className="grid grid-4">
           {items.map((item, index) => (
             <div key={item.id} className={`activity-item animate fade-up delay-${(index + 1) * 100}`}>
-              <div className="activity-icon">
+              <div className={`activity-icon animate bounce-in delay-${(index + 1) * 100 + 200}`}>
                 {item.icon || '✨'}
               </div>
               <div>
