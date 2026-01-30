@@ -32,17 +32,25 @@ function App() {
             Explore <span>Raja Ampat</span>
           </a>
 
-          <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-            <a href="#about">About</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#activities">Activities</a>
-            <a href="#culinary">Culinary</a>
-            <a href="#culture">Culture</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact" className="nav-btn">Book Now</a>
-          </div>
+          <button
+            className={`mobile-toggle ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
 
-          {/* Mobile Toggle would go here if implemented fully */}
+          <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
+            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#destinations" onClick={() => setMenuOpen(false)}>Destinations</a>
+            <a href="#activities" onClick={() => setMenuOpen(false)}>Activities</a>
+            <a href="#culinary" onClick={() => setMenuOpen(false)}>Culinary</a>
+            <a href="#culture" onClick={() => setMenuOpen(false)}>Culture</a>
+            <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
+            <a href="#contact" className="btn-nav" onClick={() => setMenuOpen(false)}>Book Now</a>
+          </div>
         </div>
       </nav>
 
