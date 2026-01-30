@@ -5,7 +5,7 @@ const About: React.FC = () => {
     <section id="about" className="info-section">
       <div className="container">
         <div className="grid grid-3">
-          <div className="info-card">
+          <div className="info-card animate fade-up delay-100">
             <div className="info-icon">
               🌿
             </div>
@@ -15,7 +15,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="info-card">
+          <div className="info-card animate fade-up delay-200">
             <div className="info-icon">
               🌊
             </div>
@@ -25,7 +25,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="info-card">
+          <div className="info-card animate fade-up delay-300">
             <div className="info-icon">
               🛖
             </div>

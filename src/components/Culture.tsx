@@ -4,7 +4,7 @@ const Culture: React.FC = () => {
   return (
     <section id="culture" className="section">
       <div className="container">
-        <div className="culture-card">
+        <div className="culture-card animate fade-up">
           <div className="culture-img">
             <img
               src="https://images.unsplash.com/photo-1518182170546-0766ce6fec56?auto=format&fit=crop&w=1200&q=80"

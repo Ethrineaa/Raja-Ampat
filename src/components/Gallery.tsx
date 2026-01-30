@@ -16,7 +16,7 @@ const Gallery: React.FC<Props> = ({ items }) => {
 
         <div className="gallery-grid">
           {items.map((item, index) => (
-            <div key={item.id} className={`gallery-item item-${index}`}>
+            <div key={item.id} className={`gallery-item item-${index} animate fade-up delay-${(index % 4) * 100}`}>
               <img src={item.image} alt={item.alt || 'Gallery image'} loading="lazy" />
               <div className="gallery-overlay">
                 <span className="gallery-caption">{item.alt}</span>

@@ -7,13 +7,16 @@ interface Props {
 
 const Destinations: React.FC<Props> = ({ items }) => {
   return (
-    <section id="destinations" className="section">
+    <section id="destinations" className="section bg-light">
       <div className="container">
-        <h2 className="section-title">Top Destinations</h2>
+        <div className="section-head animate fade-up">
+          <h5 className="text-accent" style={{ fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Top Destinations</h5>
+          <h2 className="section-title">Must-Visit Spots</h2>
+        </div>
 
-        <div className="grid grid-4" style={{ overflowX: 'auto', paddingBottom: '1rem', gridTemplateColumns: 'repeat(4, minmax(280px, 1fr))' }}>
-          {items.map((item, index) => (
-            <div key={index} className="dest-card group">
+        <div className="destinations-scroll animate fade-up delay-200">
+          {items.map((item) => (
+            <div key={item.name} className="dest-card group">
               <div className="dest-img">
                 <img src={item.image} alt={item.name} loading="lazy" />
               </div>

@@ -9,11 +9,11 @@ const Activities: React.FC<Props> = ({ items }) => {
   return (
     <section id="activities" className="section bg-white">
       <div className="container">
-        <h2 className="section-title" style={{ textAlign: 'center' }}>Things to Do</h2>
+        <h2 className="section-title animate fade-up" style={{ textAlign: 'center' }}>Things to Do</h2>
 
         <div className="grid grid-4">
-          {items.map((item) => (
-            <div key={item.id} className="activity-item">
+          {items.map((item, index) => (
+            <div key={item.id} className={`activity-item animate fade-up delay-${(index + 1) * 100}`}>
               <div className="activity-icon">
                 {item.icon || '✨'}
               </div>

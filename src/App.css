@@ -374,13 +374,46 @@ transition: background 0.2s;
 }
 
 /* Destinations */
+.destinations-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* smooth scrolling on iOS */
+}
+
+.destinations-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.destinations-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.destinations-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
 .dest-card {
+  flex: 0 0 280px;
+  /* Fixed width for scroll items */
+  scroll-snap-align: start;
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
   aspect-ratio: 3/4;
   box-shadow: var(--shadow-md);
-  group: hover;
+  /* group: hover;  <-- This was invalid CSS property syntax in previous view */
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .dest-card {
+    flex: 0 0 320px;
+  }
 }
 
 .dest-img {

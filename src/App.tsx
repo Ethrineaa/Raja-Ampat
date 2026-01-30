@@ -21,7 +21,28 @@ function App() {
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    // Intersection Observer for Animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Only animate once
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1, // Trigger when 10% visible
+      rootMargin: "0px 0px -50px 0px" // Trigger slightly before bottom
+    });
+
+    const animatedElements = document.querySelectorAll('.animate');
+    animatedElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      animatedElements.forEach((el) => observer.unobserve(el));
+    };
   }, []);
 
   return (
