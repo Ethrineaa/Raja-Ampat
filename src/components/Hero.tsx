@@ -26,9 +26,6 @@ const Hero: React.FC = () => {
               <a href="#destinations" className="btn btn-primary">
                 Start Adventure
               </a>
-              <button className="btn btn-icon" aria-label="Watch Video">
-                ▶
-              </button>
             </div>
           </div>
         </div>
