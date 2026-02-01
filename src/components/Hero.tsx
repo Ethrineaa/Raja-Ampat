@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
         <div className="hero-container">
           <div className="hero-bg animate fade-in">
             <img
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=80"
+              src="src/assets/rajaampat.jpg"
               alt="Raja Ampat Islands"
               loading="eager"
             />

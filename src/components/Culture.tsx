@@ -7,7 +7,7 @@ const Culture: React.FC = () => {
         <div className="culture-card animate zoom-in">
           <div className="culture-img animate fade-in delay-200">
             <img
-              src="https://images.unsplash.com/photo-1518182170546-0766ce6fec56?auto=format&fit=crop&w=1200&q=80"
+              src="src/assets/traditionalpapua.webp"
               alt="Papuan Dancers"
             />
           </div>
